@@ -48,7 +48,7 @@ def decode_logs_udf(dataset_id, abi_file_path):
             return result;
         }};
 
-        var result = transformParams(parsedLog.values, abi.inputs);
+        var result = transformParams(parsedLog.values, abi[0].inputs);
         return result;
         ''';
     """

@@ -1,0 +1,15 @@
+name: 'protocol_positions'
+profile: 'protocol_positions'
+
+models:
+  protocol_positions:
+    materialized: table
+    # uniswap_v3:
+    #   transform:
+    #     materialized: table
+    #     +dataset: uniswap_v3
+
+    # unipilot:
+    #   transform:
+    #     materialized: table
+    #     +dataset: unipilot

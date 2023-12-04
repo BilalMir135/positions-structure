@@ -1,0 +1,12 @@
+protocol_positions:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /usr/local/airflow/include/gcp/service_account.json
+      project: spock-main
+      dataset: p
+      threads: 1
+      timeout_seconds: 300
+      location: US

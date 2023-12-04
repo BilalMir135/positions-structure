@@ -1,9 +1,5 @@
-from glob import glob
-
 from dags.build_dag import build_dag
+from include.common.constants.index import PROTOCOLS
 
-protocols = ['aave', 'unipilot', 'uniswapv3']
-
-for protocol in glob('/usr/local/airflow/projects/*'):
-    dag_id = protocol.split('/')[-1] #name of project
+for dag_id in PROTOCOLS:
     globals()[dag_id] = build_dag(dag_id)
